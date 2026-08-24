@@ -1,0 +1,475 @@
+.envelope-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(184, 193, 155, 0.55),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(216, 201, 171, 0.55),
+      transparent 34%
+    ),
+    #f1e9d7;
+
+  color: #292b20;
+  font-family: "DM Sans", sans-serif;
+}
+
+.envelope-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 5;
+}
+
+.invitation-label {
+  margin-bottom: 34px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 5px;
+
+  color: #6d644f;
+  text-transform: uppercase;
+}
+
+.envelope {
+  width: 520px;
+  height: 315px;
+
+  position: relative;
+
+  perspective: 1400px;
+  transform-style: preserve-3d;
+
+  cursor: pointer;
+
+  filter:
+    drop-shadow(
+      0 30px 35px rgba(41, 43, 32, 0.2)
+    );
+}
+
+.envelope-back {
+  position: absolute;
+  inset: 0;
+
+  background: #d8c9ab;
+
+  border-radius: 12px;
+
+  z-index: 1;
+}
+
+.letter {
+  position: absolute;
+
+  width: 84%;
+  height: 270px;
+
+  left: 8%;
+  bottom: 18px;
+
+  background: #f1e9d7;
+
+  border: 1px solid rgba(41, 43, 32, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  box-shadow:
+    0 18px 35px rgba(41, 43, 32, 0.16);
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+.letter span {
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #929a7c;
+}
+
+.letter h1 {
+  margin: 12px 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 42px;
+  font-weight: 500;
+
+  color: #292b20;
+}
+
+.letter-line {
+  margin-bottom: 8px;
+
+  color: #6d644f;
+
+  font-size: 20px;
+}
+
+.letter p {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 18px;
+  line-height: 1.5;
+
+  color: #6d644f;
+}
+
+.envelope-left {
+  position: absolute;
+  inset: 0;
+
+  background: #b8c19b;
+
+  clip-path:
+    polygon(
+      0 0,
+      50% 53%,
+      0 100%
+    );
+
+  border-radius: 12px;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+.envelope-right {
+  position: absolute;
+  inset: 0;
+
+  background: #b8c19b;
+
+  clip-path:
+    polygon(
+      100% 0,
+      50% 53%,
+      100% 100%
+    );
+
+  border-radius: 12px;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+.envelope-front {
+  position: absolute;
+  inset: 0;
+
+  background: #929a7c;
+
+  clip-path:
+    polygon(
+      0 0,
+      50% 56%,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+
+  border-radius: 12px;
+
+  z-index: 6;
+
+  pointer-events: none;
+}
+
+.envelope-flap {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  background: #b8c19b;
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 0,
+      50% 58%
+    );
+
+  transform-origin: top center;
+
+  transform-style: preserve-3d;
+
+  backface-visibility: hidden;
+
+  border-radius: 12px;
+
+  z-index: 8;
+
+  pointer-events: none;
+}
+
+.envelope.is-open .letter {
+  z-index: 20;
+}
+
+.envelope.is-open .envelope-flap {
+  z-index: 2;
+}
+
+.envelope.is-open .envelope-front {
+  z-index: 4;
+}
+
+.envelope.is-open .envelope-left,
+.envelope.is-open .envelope-right {
+  z-index: 4;
+}
+
+.wax-seal {
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  left: 45%;
+  top: 44%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #6d644f;
+
+  border: 5px solid #d8c9ab;
+
+  color: #f1e9d7;
+
+  font-family: Georgia, serif;
+
+  font-size: 23px;
+
+  z-index: 15;
+
+  box-shadow:
+    0 10px 25px rgba(41, 43, 32, 0.28),
+    0 0 25px rgba(184, 193, 155, 0.4);
+}
+
+.open-area {
+  margin-top: 42px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.open-button {
+  border: none;
+  outline: none;
+
+  padding: 15px 30px;
+
+  border-radius: 999px;
+
+  background: #292b20;
+
+  color: #f1e9d7;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 28px rgba(41, 43, 32, 0.22);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.open-button:hover {
+  background: #6d644f;
+
+  box-shadow:
+    0 16px 32px rgba(41, 43, 32, 0.28);
+}
+
+.open-button span {
+  margin-left: 12px;
+  font-size: 17px;
+}
+
+.hint {
+  margin-top: 14px;
+
+  font-size: 11px;
+
+  color: #6d644f;
+
+  letter-spacing: 0.3px;
+}
+
+.opening-message {
+  margin-top: 42px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 19px;
+
+  font-style: italic;
+
+  color: #6d644f;
+}
+
+.fiber-bg {
+  position: absolute;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(146, 154, 124, 0.7),
+    transparent
+  );
+
+  opacity: 0.6;
+
+  pointer-events: none;
+}
+
+.fiber-bg::after {
+  content: "";
+
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  top: -3px;
+
+  border-radius: 50%;
+
+  background: #f1e9d7;
+
+  box-shadow:
+    0 0 14px #f1e9d7,
+    0 0 25px rgba(184, 193, 155, 0.8);
+
+  animation: fiberTravel 3s linear infinite;
+}
+
+.fiber-bg-1 {
+  width: 420px;
+
+  left: -100px;
+  top: 23%;
+
+  transform: rotate(17deg);
+}
+
+.fiber-bg-2 {
+  width: 360px;
+
+  right: -100px;
+  top: 35%;
+
+  transform: rotate(-18deg);
+}
+
+.fiber-bg-3 {
+  width: 400px;
+
+  left: -100px;
+  bottom: 20%;
+
+  transform: rotate(-12deg);
+}
+
+@keyframes fiberTravel {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .invitation-label {
+    margin-bottom: 25px;
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .envelope {
+    width: 340px;
+    height: 210px;
+  }
+
+  .letter {
+    height: 180px;
+  }
+
+  .letter h1 {
+    font-size: 29px;
+  }
+
+  .letter p {
+    font-size: 14px;
+  }
+
+  .wax-seal {
+    width: 54px;
+    height: 54px;
+    top: 58%;
+    font-size: 18px;
+  }
+
+  .open-area {
+    margin-top: 30px;
+  }
+}

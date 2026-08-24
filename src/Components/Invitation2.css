@@ -1,0 +1,549 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden !important;
+}
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sudipta-invitation-page {
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.sudipta-invitation-page {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(184, 193, 155, 0.45),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 82%,
+      rgba(216, 201, 171, 0.5),
+      transparent 32%
+    ),
+    #f1e9d7;
+
+  color: #292b20;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+.sudipta-invitation-card {
+width: min(720px, 88vw);
+  height: min(760px, calc(100dvh - 40px));
+  max-height: calc(100dvh - 40px);
+
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 55px 70px;
+
+  text-align: center;
+
+  background: #f1e9d7;
+
+  border: 1px solid rgba(41, 43, 32, 0.12);
+
+  box-shadow:
+    0 30px 80px rgba(41, 43, 32, 0.15),
+    0 10px 25px rgba(41, 43, 32, 0.08);
+}
+
+.invitation-inner-border {
+  position: absolute;
+
+  inset: 16px;
+
+  border: 1px solid rgba(109, 100, 79, 0.3);
+
+  pointer-events: none;
+}
+
+.invitation-top-line {
+  position: absolute;
+
+  top: 28px;
+  left: 50%;
+
+  width: 60%;
+
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: #929a7c;
+}
+
+.sudipta-invitation-label {
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #6d644f;
+}
+
+.fiber-emblem {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #6d644f;
+}
+
+.fiber-emblem span {
+  width: 35px;
+  height: 1px;
+
+  background: #929a7c;
+
+  position: relative;
+}
+
+.fiber-emblem span::after {
+  content: "";
+
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  top: -2px;
+
+  border-radius: 50%;
+
+  background: #6d644f;
+
+  box-shadow:
+    0 0 8px rgba(109, 100, 79, 0.7);
+
+  animation: fiberPoint 2s ease-in-out infinite;
+}
+
+.fiber-emblem span:first-child::after {
+  right: 0;
+}
+
+.fiber-emblem span:last-child::after {
+  left: 0;
+
+  animation-delay: 1s;
+}
+
+.fiber-emblem b {
+  font-family: Georgia, serif;
+
+  font-size: 24px;
+
+  font-weight: 400;
+
+  color: #6d644f;
+}
+
+.sudipta-invitation-card h1 {
+  margin-top: 12px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(60px, 8vw, 82px);
+
+  font-weight: 500;
+
+  line-height: 0.82;
+
+  color: #292b20;
+}
+
+.sudipta-invitation-card h1 span {
+  display: block;
+
+  margin-top: 14px;
+
+  font-size: 0.68em;
+
+  font-style: italic;
+
+  color: #6d644f;
+}
+
+.sudipta-divider {
+  height: 1px;
+
+  margin: 32px 0;
+
+  background: #929a7c;
+}
+
+.sudipta-invitation-message {
+  max-width: 500px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #6d644f;
+}
+
+.sudipta-invitation-card h2 {
+  margin-top: 28px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 38px;
+
+  font-weight: 500;
+
+  color: #292b20;
+}
+
+.sudipta-role {
+  margin-top: 5px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #929a7c;
+}
+
+.sudipta-event-details {
+  margin-top: 32px;
+
+  padding: 18px 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 45px;
+
+  border-top: 1px solid rgba(109, 100, 79, 0.2);
+
+  border-bottom: 1px solid rgba(109, 100, 79, 0.2);
+}
+
+.sudipta-event-details div:not(.event-divider) {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.sudipta-event-details span {
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: #929a7c;
+}
+
+.sudipta-event-details strong {
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  color: #292b20;
+}
+
+.event-divider {
+  width: 1px;
+
+  height: 32px;
+
+  background: #b8b29e;
+}
+
+.sudipta-bottom-note {
+  margin-top: 24px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+  color: #6d644f;
+}
+
+.fiber-line i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 5px;
+  height: 5px;
+
+  transform: translateY(-50%);
+  border-radius: 50%;
+
+  background: #fff8df;
+
+  box-shadow:
+    0 0 8px #fff8df,
+    0 0 18px #929a7c;
+
+  animation: signalTravel 3s linear infinite;
+  animation-delay: 1.4s;
+}
+.fiber-line {
+  position: absolute;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(146, 154, 124, 0.7),
+    transparent
+  );
+
+  opacity: 0.6;
+
+  z-index: 1;
+}
+
+.fiber-line span {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  top: -2px;
+
+  border-radius: 50%;
+
+  background: #929a7c;
+
+  box-shadow:
+    0 0 10px #929a7c,
+    0 0 22px rgba(184, 193, 155, 0.9);
+
+  animation: fiberTravel 4s linear infinite;
+}
+
+.fiber-line-1 {
+  width: 400px;
+
+  left: -80px;
+  top: 22%;
+
+  transform: rotate(17deg);
+}
+
+.fiber-line-2 {
+  width: 350px;
+
+  right: -80px;
+  top: 30%;
+
+  transform: rotate(-18deg);
+}
+
+.fiber-line-3 {
+  width: 420px;
+
+  left: -100px;
+  bottom: 22%;
+
+  transform: rotate(-12deg);
+}
+
+.fiber-line-4 {
+  width: 350px;
+
+  right: -90px;
+  bottom: 18%;
+
+  transform: rotate(15deg);
+}
+
+.fiber-line-2 span {
+  animation-delay: 1s;
+}
+
+.fiber-line-3 span {
+  animation-delay: 2s;
+}
+
+.fiber-line-4 span {
+  animation-delay: 3s;
+}
+
+.fiber-node {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #6d644f;
+
+  box-shadow:
+    0 0 12px rgba(109, 100, 79, 0.7),
+    0 0 25px rgba(184, 193, 155, 0.8);
+
+  z-index: 2;
+
+  animation: nodePulse 2.5s ease-in-out infinite;
+}
+
+.node-1 {
+  top: 20%;
+  left: 17%;
+}
+
+.node-2 {
+  top: 28%;
+  right: 16%;
+
+  animation-delay: 0.7s;
+}
+
+.node-3 {
+  bottom: 21%;
+  left: 14%;
+
+  animation-delay: 1.4s;
+}
+
+.node-4 {
+  bottom: 17%;
+  right: 18%;
+
+  animation-delay: 2s;
+}
+
+@keyframes fiberTravel {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes fiberPoint {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+@keyframes nodePulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+@media (max-width: 600px) {
+  .sudipta-invitation-page {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .sudipta-invitation-card {
+    width: 92vw;
+    height: calc(100dvh - 30px);
+    max-height: calc(100dvh - 30px);
+    padding: 35px 22px;
+  }
+
+  .sudipta-invitation-card h1 {
+    font-size: 48px;
+  }
+
+  .sudipta-invitation-message {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .sudipta-invitation-card h2 {
+    font-size: 29px;
+  }
+
+  .sudipta-event-details {
+    gap: 18px;
+    padding: 13px;
+  }
+
+  .sudipta-event-details strong {
+    font-size: 8px;
+  }
+
+  .fiber-line {
+    opacity: 0.3;
+  }
+}
