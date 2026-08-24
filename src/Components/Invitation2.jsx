@@ -212,8 +212,8 @@ const Invitation2 = () => {
             <span>OCCASION</span>
             <strong>TEACHER'S DAY</strong>
           </div>
+           <div className="event-divider"></div>
           <div>
-            <div className="event-divider"></div>
             <span>VENUE</span>
             <strong>Room No.4201</strong>
           </div>
