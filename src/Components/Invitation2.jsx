@@ -3,7 +3,12 @@ import { motion } from 'motion/react'
 import './Invitation2.css'
 const Invitation2 = () => {
   return (
+    
    <><main className="sudipta-invitation-page">
+    <div className="element element-one"></div>
+<div className="element element-two"></div>
+<div className="element element-three"></div>
+<div className="element element-four"></div>
  <div className="fiber-line fiber-line-1">
   <span></span>
   <i></i>
