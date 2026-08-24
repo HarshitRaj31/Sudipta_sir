@@ -213,6 +213,7 @@ const Invitation2 = () => {
             <strong>TEACHER'S DAY</strong>
           </div>
           <div>
+            <div className="event-divider"></div>
             <span>VENUE</span>
             <strong>Room No.4201</strong>
           </div>
