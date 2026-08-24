@@ -10,8 +10,8 @@ function App() {
   return (
     <>
      <Routes>
-      <Route path='/invitation' element={<Invitation2/>}/>
-<Route path='/invite' element={<Envelope2/>}/>
+      <Route path='/' element={<Invitation2/>}/>
+<Route path='/invitation' element={<Envelope2/>}/>
 
      </Routes>
     </>
