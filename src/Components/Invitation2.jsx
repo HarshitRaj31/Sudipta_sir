@@ -217,6 +217,7 @@ const Invitation2 = () => {
             <span>VENUE</span>
             <strong>Room No.4201</strong>
           </div>
+          
         </motion.div>
 
         <motion.p
